@@ -3,7 +3,7 @@ name: Deploy to AWS EC2 with Apache Tomcat
 on:
   push:
     branches:
-      - main  # Deploy on push to the main branch
+      - master  # Deploy on push to the main branch
 
 jobs:
   deploy:
@@ -30,7 +30,7 @@ jobs:
 
       - name: Deploy WAR to EC2
         env:
-          EC2_HOST: "3.83.90.105"  # Your EC2 instance public IP
+          EC2_HOST: "44.206.224.235"  # Your EC2 instance public IP
           EC2_USER: "ec2-user"       # Your SSH username
           EC2_KEY: |                 # Your SSH private key in PEM format
             -----BEGIN RSA PRIVATE KEY-----
