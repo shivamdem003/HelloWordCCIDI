@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>HelloWorld</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>HelloWorld</name>
-	<description>Demo project for Spring Boot</description>
+	<artifactId>demSite</artifactId>
+	<version>0.0.1</version>
+	<name>demSite</name>
+	<description>Project to experiment with the pipelines</description>
 	<packaging>war</packaging>
 
 	<properties>
@@ -38,6 +38,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
