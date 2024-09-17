@@ -63,9 +63,9 @@ jobs:
         run: |
           echo "$EC2_KEY" > ec2-key.pem
           chmod 400 ec2-key.pem
-          scp -o StrictHostKeyChecking=no -i ec2-key.pem target/HelloWorld-0.0.1-SNAPSHOT.war $EC2_USER@$EC2_HOST:/home/$EC2_USER/
+          scp -o StrictHostKeyChecking=no -i ec2-key.pem target/demSite-0.0.1.war $EC2_USER@$EC2_HOST:/home/$EC2_USER/
           ssh -o StrictHostKeyChecking=no -i ec2-key.pem $EC2_USER@$EC2_HOST <<EOF
-            sudo mv /home/$EC2_USER/HelloWorld-0.0.1-SNAPSHOT.war /devl/apache-tomcat-9.0.94/webapps/
+            sudo mv /home/$EC2_USER/demSite-0.0.1.war /devl/apache-tomcat-9.0.94/webapps/
             sudo /devl/apache-tomcat-9.0.94/bin/shutdown.sh
             sudo /devl/apache-tomcat-9.0.94/bin/startup.sh
           EOF
